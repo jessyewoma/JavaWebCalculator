@@ -26,14 +26,14 @@
         name: git
         state: present
 
-    - name: Clone Apache-tomcat repository
+    - name: Clone JavawebCalculator repository
       git:
-        repo: https://github.com/jessyewoma/Apache-tomcat.git
-        dest: /home/ec2-user/Apache-tomcat
+        repo: https://github.com/jessyewoma/JavaWebCalculator.git
+        dest: /home/ec2-user/JavaWebCalculator
         
     - name: Copy web application to Tomcat
       copy:
-        src: /home/ec2-user/Apache-tomcat/JavaWebCalculator/src/main/java
+        src: /home/ec2-user/JavaWebCalculator/src/main/java
         dest: /home/ec2-user/apache-tomcat-10.0.27/webapps/
         mode: 0755
     
